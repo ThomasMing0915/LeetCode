@@ -76,7 +76,6 @@ func main() {
 
 	node1.Left = node3
 	node1.Right = node4
-
 	//convertBST2(root)
 	convertBST(root)
 	inorderedTravel(root)

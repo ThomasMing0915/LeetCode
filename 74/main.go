@@ -47,13 +47,13 @@ func searchMatrix(matrix [][]int, target int) bool {
 }
 
 func main(){
-	maxtrix:=[][]int{
+	matrix:=[][]int{
 		{1,3,5,7},
 		{10,11,16,20},
 		{23,30,34,50},
 	}
 
-	fmt.Println(searchMatrix(maxtrix,13))
+	fmt.Println(searchMatrix(matrix,13))
 
 
 }

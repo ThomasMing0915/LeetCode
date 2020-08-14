@@ -1,1 +1,1 @@
-package quicksort
+package main

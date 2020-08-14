@@ -28,17 +28,55 @@ func inorderTraversalInner(root *TreeNode, inorderNums *[]int) {
 	inorderTraversalInner(root.Right, inorderNums)
 }
 
-func main() {
-	root := &TreeNode{
-		Val: 1,
+//func main() {
+//	root := &TreeNode{
+//		Val: 1,
+//	}
+//	node1 := &TreeNode{
+//		Val: 2,
+//	}
+//	node2 := &TreeNode{
+//		Val: 3,
+//	}
+//	root.Left = node1
+//	root.Right = node2
+//	fmt.Println(inorderTraversal(root))
+//}
+
+//非递归实现
+func inorderTraversal2(root *TreeNode) []int {
+	if root==nil{
+		return nil
 	}
-	node1 := &TreeNode{
-		Val: 2,
+
+	res:=make([]int,0,32)
+	stack:=make([]*TreeNode,0,32)
+
+	top:=root
+
+	for top!=nil || len(stack)>0{
+		for top!=nil {
+			stack=append(stack,top)
+			res=append(res,top.Val)
+			top=top.Left
+		}
+		if len(stack)>0{
+			top=stack[len(stack)-1]
+			stack=stack[:len(stack)-1]
+			top=top.Right
+		}
 	}
-	node2 := &TreeNode{
-		Val: 3,
-	}
-	root.Left = node1
-	root.Right = node2
-	fmt.Println(inorderTraversal(root))
+	return res
+}
+
+
+func main(){
+	root:=&TreeNode{Val: 1}
+	node2:=&TreeNode{Val: 2}
+	node3:=&TreeNode{Val: 3}
+
+	root.Right=node2
+	node2.Left=node3
+
+	fmt.Println(inorderTraversal2(root))
 }

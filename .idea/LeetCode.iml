@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/../../../../Lua/luaCode" />
+    <content url="file://$MODULE_DIR$/../JZOffer" />
+    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/../../../../test/JZOffer" />
+    <content url="file://$MODULE_DIR$/../../../../test/LRU" />
+    <content url="file://$MODULE_DIR$/../../../../test/goMapExtend" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
